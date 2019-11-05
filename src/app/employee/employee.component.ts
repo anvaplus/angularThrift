@@ -8,8 +8,12 @@ import {Component} from '@angular/core'
 
 
 export class EmployeeComponent{
-    firstName = 'Valentino';
-    lastName = 'Rossi';
-    gender = 'Male';
-    age = '40';
+    firstName : string = 'Valentino';
+    lastName : string = 'Rossi';
+    gender : string= 'Male';
+    age : number = 40;
+
+    getFullName(): string{
+        return this.firstName + ' ' + this.lastName; 
+    }
 }

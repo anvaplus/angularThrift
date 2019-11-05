@@ -7,7 +7,7 @@
 <table>
     <tr>
         <td>First Name</td>
-        <td>{{firstName}}</td> 
+        <td>{{firstName}}</td>
     </tr>
     <tr>
         <td>Last Name</td>
@@ -27,9 +27,21 @@
 
 <!-- the button disabled value is inserted by interpolation 
     this implementation will NOT work-->
-<button disabled = {{isDisabled}}>Click me interpolation</button>
+<button disabled={{isDisabled}}>Click me interpolation</button>
 
 <br><br>
 <!-- the button disabled value is inserted by binding to DOM proprety (Document Object Model)
     this implementation will work-->
-<button [disabled] = 'isDisabled'>Click me binding</button>
+<button [disabled]='isDisabled'>Click me binding</button>
+
+<br><br>
+
+<table>
+    <tr>
+        <!-- proprety binding []-->
+        <!-- event binding ()-->
+        <td><button [disabled]='isDisabled' (click)=onClickBackward()>Modify age backward</button></td>
+        <td><button [disabled]='isDisabled' (click)=onClickForward()>Modify age forward</button></td>
+    </tr>
+
+</table>

@@ -14,6 +14,7 @@ export class EmployeeComponent {
     age = 40;
 
     isDisabled: boolean = false;
+    showDetails: boolean = true;
 
     getFullName(): string {
         return this.firstName + ' ' + this.lastName;
@@ -35,4 +36,7 @@ export class EmployeeComponent {
         this.age =+ this.age - 1
     }
 
+    onClickToggle(): void {
+        this.showDetails = !this.showDetails
+    }
 }

@@ -13,11 +13,11 @@
         <td>Last Name</td>
         <td>{{lastName}}</td>
     </tr>
-    <tr>
+    <tr *ngIf='showDetails'>
         <td>Gender</td>
         <td>{{gender}}</td>
     </tr>
-    <tr>
+    <tr *ngIf='showDetails'>
         <td>Age</td>
         <td>{{age}}</td>
     </tr>
@@ -45,3 +45,7 @@
     </tr>
 
 </table>
+
+<br><br>
+<button (click)=onClickToggle()>Toggle button details</button>
+
